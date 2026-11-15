@@ -9,6 +9,7 @@ publication is manual. Nothing is installed on your Kindle by building this proj
 
 Repository: [CaptainCamin/kindle-starter](https://github.com/CaptainCamin/kindle-starter).
 KPM manifest: <https://captaincamin.github.io/kindle-starter/manifest.json>.
+Short install URL: <https://tinyurl.com/ko-setup> (redirects to the same manifest).
 
 ## Package behavior
 
@@ -86,10 +87,12 @@ for a changed release. It does not build a historical repository of prior versio
 5. Add the repository once, then run these commands separately in the Kindle search bar:
 
 ```text
-;kpm add-repo https://captaincamin.github.io/kindle-starter/manifest.json
+;kpm add-repo https://tinyurl.com/ko-setup
 ;kpm update
 ;kpm install kindle-starter
 ```
+
+If TinyURL is unavailable, use the full KPM manifest URL above with `add-repo`.
 
 The default official repository must remain configured to resolve `koreader`.
 After installation, open the normal **KOReader** scriptlet or run
