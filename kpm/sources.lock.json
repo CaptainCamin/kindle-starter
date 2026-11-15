@@ -1,0 +1,32 @@
+{
+  "kpm_helper": {
+    "url": "https://raw.githubusercontent.com/KindleModding/KPM/4800e09412ceee6cc85ca924dc13fb27ba867d9b/kpm-helper.py",
+    "sha256": "09374f8c0bca92d1a689c923e78e0e14f2894c182789f8010c709d5e0eafc499"
+  },
+  "plugins": [
+    {
+      "id": "bookshelf",
+      "version": "6.5.1",
+      "license": "AGPL-3.0",
+      "url": "https://github.com/AndyHazz/bookshelf.koplugin/releases/download/v6.5.1/bookshelf.koplugin.zip",
+      "sha256": "ca6d7d37497cc114a4b2970806be64fd8a00a9d31fb564e9f78f4aff0dc24837",
+      "source": {
+        "url": "https://codeload.github.com/AndyHazz/bookshelf.koplugin/tar.gz/51f35fba25fe4c8f7857319e16141921fe04f6d2",
+        "sha256": "15731996d637ff925f4f50e4cbfbe3c1f922ef1c20b98e3cc4f18a1853748e07",
+        "license_path": "bookshelf.koplugin-51f35fba25fe4c8f7857319e16141921fe04f6d2/LICENSE"
+      }
+    },
+    {
+      "id": "storefront",
+      "version": "26.11.9",
+      "license": "GPL-3.0",
+      "url": "https://github.com/ultimatejimmy/storefront.koplugin/releases/download/26.11.9/storefront.koplugin.zip",
+      "sha256": "c72283f34bc15453d1557710e689e5751e19692291b3af964bdb6c98318feca1",
+      "source": {
+        "url": "https://codeload.github.com/ultimatejimmy/storefront.koplugin/tar.gz/41d29f0bca3ac491abdd1540655051fc94d6afed",
+        "sha256": "f425d5a45884614f82b7c2ef9bb2e952985e90705fcc943b21b3338ce9a22078",
+        "license_path": "storefront.koplugin-41d29f0bca3ac491abdd1540655051fc94d6afed/LICENSE"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-starter",
+  "name": "Kindle Starter",
+  "author": "Kindle Starter contributors",
+  "description": "Set up KOReader with Bookshelf and Storefront without replacing existing plugins or preferences.",
+  "version": [0, 1, 0],
+  "dependencies": [
+    {"id": "koreader", "min": [2026, 7, 2], "max": [2026, 8, 0]}
+  ],
+  "supported_platforms": ["kindlehf"]
+}
