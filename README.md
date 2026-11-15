@@ -60,12 +60,16 @@ credentials are embedded. Reusable verified inputs are cached in `build/download
 
 The complete static repository is generated in `build/site/`:
 
-- `manifest.json`: KPM repository index with relative artifact URLs.
+- `manifest.json`: KPM repository index with absolute GitHub Pages artifact URLs,
+  so a direct HTTP redirect to the manifest can also be used with `add-repo`.
 - `packages/kindle-starter/artifacts/*.kpkg`: installer and plugin payloads.
 - `sources/`: matching upstream source archives, including build scripts/notices.
 - `sources.lock.json`, `THIRD_PARTY.md`, `SHA256SUMS`: provenance, licenses and hashes.
 
 Serve **all** of `build/site`, including `sources/`, from the same HTTPS base URL.
+If moving or forking the repository, update the canonical artifact base URL in
+`kpm/build.py` before building. Short links must redirect directly to the JSON,
+without a preview page, login or CAPTCHA; the full manifest URL above remains usable.
 Keep corresponding sources available for every package version you distribute.
 The build currently publishes the version in `kpm/package/manifest.json`; bump it
 for a changed release. It does not build a historical repository of prior versions.

@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tarfile
 import tempfile
+from urllib.parse import urljoin
 from urllib.request import urlopen
 import zipfile
 
@@ -123,6 +124,14 @@ def main():
             [sys.executable, str(helper), "repo", "add", str(site), str(archive)],
             check=True,
         )
+        # KPM resolves relative artifacts against the entered URL, not a redirect's target.
+        index = json.loads((site / "manifest.json").read_text())
+        for package_data in index["packages"].values():
+            for artifact in package_data["artifacts"]:
+                artifact["url"] = urljoin(
+                    "https://captaincamin.github.io/kindle-starter/", artifact["url"]
+                )
+        (site / "manifest.json").write_text(json.dumps(index, indent=2) + "\n")
         shutil.copyfile(ROOT / "sources.lock.json", site / "sources.lock.json")
         shutil.copyfile(package / "THIRD_PARTY.md", site / "THIRD_PARTY.md")
         (site / ".nojekyll").touch()
